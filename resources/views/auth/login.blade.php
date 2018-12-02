@@ -8,7 +8,7 @@
                 <div class="login_heading">
                     <div class="user_avatar"></div>
                 </div>
-                 <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                 <form id="form1" class="form-horizontal" method="POST" action="{{ route('login') }}">
                  {{ csrf_field() }}
                     <div class="uk-form-row form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                    <!--   <label for="login_username">Username</label>
@@ -23,8 +23,8 @@
                                 @endif
                     </div>
                     <div class="uk-form-row form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                        <label for="password">Password</label>
-                    
+                        <label for="password">Senha</label>
+
 
                          <input id="password" type="password" class=" md-input" name="password" >
 
@@ -37,13 +37,13 @@
 
                     </div>
                     <div class="uk-margin-medium-top">
-                        <button type="submit" class="md-btn md-btn-primary md-btn-block md-btn-large">Sign In</button>
+                        <button type="submit" class="md-btn md-btn-primary md-btn-block md-btn-large">Login</button>
                     </div>
                     <div class="uk-margin-top">
-                        <a href="#" id="login_help_show" class="uk-float-right">Need help?</a>
+                        <a href="#" id="login_help_show" class="uk-float-right">Preciso de ajuda?</a>
                         <span class="icheck-inline">
                             <input type="checkbox" name="login_page_stay_signed" id="login_page_stay_signed" data-md-icheck />
-                            <label for="login_page_stay_signed" class="inline-label">Stay signed in</label>
+                            <label for="login_page_stay_signed" class="inline-label">Permaneça conectado</label>
                         </span>
                     </div>
                 </form>
@@ -57,7 +57,7 @@
             </div>
             <div class="md-card-content large-padding" id="login_password_reset" style="display: none">
                 <button type="button" class="uk-position-top-right uk-close uk-margin-right uk-margin-top back_to_login"></button>
-                <h2 class="heading_a uk-margin-large-bottom">Reset password</h2>
+            <h2 class="heading_a uk-margin-large-bottom">Redefinir senha</h2>
                <!--  <form>
                     <div class="uk-form-row">
                         <label for="login_email_reset">Your email address</label>
@@ -68,34 +68,13 @@
                     </div>
                 </form> -->
             </div>
-            <div class="md-card-content large-padding" id="register_form" style="display: none">
-                <button type="button" class="uk-position-top-right uk-close uk-margin-right uk-margin-top back_to_login"></button>
-                <h2 class="heading_a uk-margin-medium-bottom">Create an account</h2>
-                <form>
-                    <div class="uk-form-row">
-                        <label for="register_username">Username</label>
-                        <input class="md-input" type="text" id="register_username" name="register_username" />
-                    </div>
-                    <div class="uk-form-row">
-                        <label for="register_password">Password</label>
-                        <input class="md-input" type="password" id="register_password" name="register_password" />
-                    </div>
-                    <div class="uk-form-row">
-                        <label for="register_password_repeat">Repeat Password</label>
-                        <input class="md-input" type="password" id="register_password_repeat" name="register_password_repeat" />
-                    </div>
-                    <div class="uk-form-row">
-                        <label for="register_email">E-mail</label>
-                        <input class="md-input" type="text" id="register_email" name="register_email" />
-                    </div>
-                    <div class="uk-margin-medium-top">
-                        <a href="index.html" class="md-btn md-btn-primary md-btn-block md-btn-large">Sign Up</a>
-                    </div>
-                </form>
-            </div>
+         
         </div>
            <div class="uk-margin-top uk-text-center">
-            <a href="#" id="signup_form_show">Create an account</a>
+            <a href="{{route('register')}}">Crie a sua conta aqui</a>
+               <!--   <a class="btn btn-link" href="{{ route('password.request') }}">
+                                   Esqueceu sua senha?
+                                </a> -->
         </div>
     </div>
 

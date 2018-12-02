@@ -5,9 +5,14 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading">   <h3 class="heading_b uk-margin-bottom">Cadastrar</h3></div>
 
                 <div class="panel-body">
+
+                   <div class="login_page_wrapper login_page">
+   
+
+
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
@@ -15,7 +20,7 @@
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control md-input" name="name" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -29,7 +34,7 @@
                             <label for="cpf" class="col-md-4 control-label">CPF</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" required autofocus>
+                                <input id="cpf" type="text" class="form-control md-input" name="cpf" value="{{ old('cpf') }}" required autofocus>
 
                                 @if ($errors->has('cpf'))
                                     <span class="help-block">
@@ -43,7 +48,7 @@
                             <label for="rg" class="col-md-4 control-label">RG</label>
 
                             <div class="col-md-6">
-                                <input id="rg" type="text" class="form-control" name="rg" value="{{ old('rg') }}" required autofocus>
+                                <input id="rg" type="text" class="form-control md-input" name="rg" value="{{ old('rg') }}" required autofocus>
 
                                 @if ($errors->has('rg'))
                                     <span class="help-block">
@@ -59,7 +64,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control md-input" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -73,7 +78,7 @@
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" type="password" class="form-control md-input" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -87,18 +92,19 @@
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control md-input" name="password_confirmation" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="md-btn md-btn-primary md-btn-block md-btn-large">
                                     Register
                                 </button>
                             </div>
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
