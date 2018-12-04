@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('rg')->unique();
             $table->string('cpf')->unique();
+            $table->integer('id_profession')->references('id')->on('professions');
             $table->rememberToken();
             $table->timestamps();
         });

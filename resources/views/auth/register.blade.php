@@ -88,6 +88,21 @@
                             </div>
                         </div>
 
+
+                        <div class="form-group{{ $errors->has('id_profession') ? ' has-error' : '' }}">
+                            <label for="id_profession" class="col-md-4 control-label">id_profession</label>
+
+                            <div class="col-md-6">
+                                <input id="id_profession" type="text" class="form-control md-input" name="id_profession" value="{{ old('id_profession') }}" required autofocus>
+
+                                @if ($errors->has('id_profession'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('id_profession') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
